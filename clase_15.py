@@ -33,7 +33,7 @@ if uploaded_file is not None:
     
     # Filtrar datos según el valor de la columna
     valor_min = st.slider('Selecciona un valor mínimo',
-float(df[col].min()), float(df[col].max()))
+    float(df[col].min()), float(df[col].max()))
     df_filtrado = df[df[col] >= valor_min]
     
     # Mostrar los datos filtrados
