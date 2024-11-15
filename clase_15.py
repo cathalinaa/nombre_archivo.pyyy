@@ -20,9 +20,6 @@ if uploaded_file is not None:
     st.write('Primeras 5 filas del archivo:')
     st.write(df.head())
 
-if uploaded_file is not None:
-    # Leer el archivo CSV
-    df = pd.read_csv(uploaded_file)
     
     # Mostrar la estructura del DataFrame
     st.write('Estructura del DataFrame:')
@@ -34,6 +31,7 @@ if uploaded_file is not None:
     # Filtrar datos según el valor de la columna
     valor_min = st.slider('Selecciona un valor mínimo',
     float(df[col].min()), float(df[col].max()))
+    
     df_filtrado = df[df[col] >= valor_min]
     
     # Mostrar los datos filtrados
